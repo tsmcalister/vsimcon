@@ -2,6 +2,8 @@ from typing import Tuple
 from .simulator import Simulator
 from .vessels.vessel import Vessel
 
+__version__ = "0.0.1"
+
 # reset on import
 _SIMULATOR = Simulator()
 
