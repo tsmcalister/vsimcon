@@ -1,8 +1,8 @@
 import numpy as np
-import vcontrol; vcontrol.reset()
+import vsimcon; vsimcon.reset()
 
-from vcontrol.vessels import Vessel, SourceVessel
-from vcontrol.controllers import PIDController, FixedController
+from vsimcon.vessels import Vessel, SourceVessel
+from vsimcon.controllers import PIDController, FixedController
 
 # Init proportional controller
 pid = PIDController(p=1,
@@ -22,9 +22,9 @@ drain_vessel = Vessel(source=main_vessel,
 pid.connect(lambda: main_vessel.get_height(delay=35))
 
 # Simulate system to time 100 with dt=0.01
-vcontrol.simulate(100, dt=0.01)
+vsimcon.simulate(100, dt=0.01)
 
 # plot results
-fig, axs = vcontrol.plot(time_range=(50, 60))
+fig, axs = vsimcon.plot(time_range=(50, 60))
 fig.show()
 input()
