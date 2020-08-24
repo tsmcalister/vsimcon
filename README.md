@@ -4,8 +4,7 @@ A library to simulate and control dynamical systems of coupled vessels.
 
 ## Install
 ```shell script
-git clone git@github.com:tsmcalister/vcontrol.git
-python -m pip install ./vcontrol
+pip install git+https://github.com/tsmcalister/vcontrol.git
 ```
 
 ## Example
